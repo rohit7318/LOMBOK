@@ -535,6 +535,10 @@ ul
 
       /* Form container responsive */
 
+      form 
+      {
+            padding-inline: 1rem;
+      }
      
       .form-container h4 
       {
