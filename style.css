@@ -70,6 +70,11 @@ nav h3
       font-size: 1.8rem;
 }
 
+nav button 
+{
+      display: none;
+}
+
 nav .links  
 {
       display: flex;
@@ -152,19 +157,18 @@ nav .links .btn
 .articles-container
 {
       width: 100%;
-      height: 100vh;
+      min-height: 100vh;
       padding: 1rem;
 }
 
 .articles
 {
       width: 100%;
-      height: 100%;
       background-color: #F5F7F6;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      padding: 2rem 0;
 }
 
 .articles-heading 
@@ -195,9 +199,11 @@ nav .links .btn
 
 .article-cards-container 
 {
+      justify-content: center;
       display: grid;
-      grid-template-columns: repeat(3,400px);
-      column-gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px,400px));
+      gap: 3rem;
+      width: 100%;
 
 }
 
@@ -420,4 +426,145 @@ ul
       {
             text-decoration: none;
       }
+}
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width:1030px) 
+{
+
+     .center-heading h1
+     {
+      font-size: 3.5rem;
+     }
+     .center-heading p 
+     {
+      font-size: 1.2rem;
+     }
+
+     nav ul.links 
+     {
+      display: none;
+     }
+
+     nav .menu-btn 
+     {
+      background-color: transparent;
+      border: none;
+      display: block;
+     }
+
+    nav .menu-btn i 
+    {
+      color: white;
+      font-size: 1.8rem;
+    }
+
+
+
+    /* Article section responsiveness */
+    .articles-heading h2 
+    {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+
+     .articles-container
+      {
+            /* width: 100%; */
+            height: unset;
+            padding: 1rem 0;
+      }
+
+
+  
+
+      .article-cards-container 
+      {
+            width: 100%;
+            grid-template-columns: 100%;
+            row-gap: 2rem;
+      }
+
+     
+
+
+
+      /* About Responsiveness */
+
+      .about 
+      {
+            height: 100vh;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+      }
+
+      .about-image 
+      {
+            height: 40vh;
+      }
+
+    
+      .about-text 
+      {
+            display: grid;
+            grid-template-rows: 1.5fr 4fr;
+            row-gap: 0;
+      }
+
+
+      .about-text .top h3 
+      {
+            font-size: 2rem;
+      }
+
+      .about-text p 
+      {
+            width: 100%;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            text-align: center;
+      }
+
+
+      /* Form container responsive */
+
+     
+      .form-container h4 
+      {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+      }
+      .form-container > div h5 
+      {
+            font-size:1.1rem;
+            margin-bottom:.7rem;
+      }
+
+
+
+      /* footer */
+
+
+      footer 
+      {
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2rem;
+      }
+
+      footer .links 
+      {
+            order: -1;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1rem;
+      }
+     
 }
